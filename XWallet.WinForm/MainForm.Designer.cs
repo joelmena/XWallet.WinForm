@@ -31,7 +31,9 @@ namespace XWallet.WinForm
         {
             this.MainPanel = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.mtxPassword = new System.Windows.Forms.MaskedTextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.mkPassword = new System.Windows.Forms.MaskedTextBox();
             this.chkVerificado = new System.Windows.Forms.CheckBox();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -48,8 +50,6 @@ namespace XWallet.WinForm
             this.dgvEmplados = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.MainPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmplados)).BeginInit();
@@ -72,9 +72,9 @@ namespace XWallet.WinForm
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.mtxPassword);
+            this.groupBox1.Controls.Add(this.mkPassword);
             this.groupBox1.Controls.Add(this.chkVerificado);
             this.groupBox1.Controls.Add(this.btnNuevo);
             this.groupBox1.Controls.Add(this.btnGuardar);
@@ -91,14 +91,32 @@ namespace XWallet.WinForm
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar/Actualizar";
             // 
-            // mtxPassword
+            // txtNombre
             // 
-            this.mtxPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.mtxPassword.Location = new System.Drawing.Point(165, 144);
-            this.mtxPassword.Name = "mtxPassword";
-            this.mtxPassword.PasswordChar = '•';
-            this.mtxPassword.Size = new System.Drawing.Size(160, 29);
-            this.mtxPassword.TabIndex = 22;
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNombre.Location = new System.Drawing.Point(165, 109);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(160, 29);
+            this.txtNombre.TabIndex = 24;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(86, 112);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(73, 21);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Nombre";
+            // 
+            // mkPassword
+            // 
+            this.mkPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.mkPassword.Location = new System.Drawing.Point(165, 144);
+            this.mkPassword.Name = "mkPassword";
+            this.mkPassword.PasswordChar = '•';
+            this.mkPassword.Size = new System.Drawing.Size(160, 29);
+            this.mkPassword.TabIndex = 22;
             // 
             // chkVerificado
             // 
@@ -254,24 +272,6 @@ namespace XWallet.WinForm
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(165, 109);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 29);
-            this.textBox1.TabIndex = 24;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(86, 112);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 21);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Nombre";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -307,7 +307,7 @@ namespace XWallet.WinForm
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.MaskedTextBox mtxPassword;
+        private System.Windows.Forms.MaskedTextBox mkPassword;
         private System.Windows.Forms.CheckBox chkVerificado;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label lblID;
@@ -315,7 +315,7 @@ namespace XWallet.WinForm
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label6;
     }
 }
