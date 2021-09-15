@@ -54,6 +54,10 @@ namespace DAL
             {
                 Console.WriteLine(ex.Message);
             }
+            finally
+            {
+                connect.Close();
+            }
             return dt;
         }
 
