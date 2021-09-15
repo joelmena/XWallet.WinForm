@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 
 namespace BAL
 {
@@ -16,6 +17,11 @@ namespace BAL
         public void GetList(string busqueda) { }
         public void GetDetail(string codigo) { }
         public void Delete(string codigo) { }
+        public bool Open()
+        {
+            var cnn = new DbConnection();
+            return cnn.Open();
+        }
     }
 
 }

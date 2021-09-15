@@ -18,3 +18,14 @@ C:\Users\joelmena\source\repos\XWallet.WinForm\XWallet.WinForm\obj\Debug\net5.0-
 C:\Users\joelmena\source\repos\XWallet.WinForm\XWallet.WinForm\obj\Debug\net5.0-windows\XWallet.WinForm.genruntimeconfig.cache
 C:\Users\joelmena\source\repos\XWallet.WinForm\XWallet.WinForm\obj\Debug\net5.0-windows\XWallet.WinForm.EditForm.resources
 C:\Users\joelmena\source\repos\XWallet.WinForm\XWallet.WinForm\obj\Debug\net5.0-windows\XWallet.WinForm.Properties.Resources.resources
+C:\Users\joelmena\source\repos\XWallet.WinForm\XWallet.WinForm\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+C:\Users\joelmena\source\repos\XWallet.WinForm\XWallet.WinForm\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\joelmena\source\repos\XWallet.WinForm\XWallet.WinForm\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\joelmena\source\repos\XWallet.WinForm\XWallet.WinForm\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\joelmena\source\repos\XWallet.WinForm\XWallet.WinForm\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\joelmena\source\repos\XWallet.WinForm\XWallet.WinForm\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\joelmena\source\repos\XWallet.WinForm\XWallet.WinForm\bin\Debug\net5.0-windows\BAL.dll
+C:\Users\joelmena\source\repos\XWallet.WinForm\XWallet.WinForm\bin\Debug\net5.0-windows\DAL.dll
+C:\Users\joelmena\source\repos\XWallet.WinForm\XWallet.WinForm\bin\Debug\net5.0-windows\BAL.pdb
+C:\Users\joelmena\source\repos\XWallet.WinForm\XWallet.WinForm\bin\Debug\net5.0-windows\DAL.pdb
+C:\Users\joelmena\source\repos\XWallet.WinForm\XWallet.WinForm\obj\Debug\net5.0-windows\XWallet.WinForm.csproj.CopyComplete

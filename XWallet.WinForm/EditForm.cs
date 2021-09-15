@@ -21,5 +21,19 @@ namespace XWallet.WinForm
         {
             this.Close();
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            var cnn = new BAL.Empleado();
+
+            if (cnn.Open())
+            {
+                MessageBox.Show("Ok");
+            }
+            else
+            {
+                MessageBox.Show("Fail");
+            }
+        }
     }
 }
