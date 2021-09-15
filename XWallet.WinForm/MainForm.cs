@@ -18,8 +18,8 @@ namespace XWallet.WinForm
         {
             InitializeComponent();
             Empleado = new Empleado();
-
-            dgvEmplados.DataSource = Empleado.GetList();
+            dgvEmplados.AutoGenerateColumns = false;
+            ActualizarGridView();
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -33,6 +33,19 @@ namespace XWallet.WinForm
         private void btnActualizar_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void ActualizarGridView()
+        {
+            var result = Empleado.GetList();
+            dgvEmplados.DataSource = result;
+            lblTotal.Text = result.Rows.Count.ToString();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            ActualizarGridView();
         }
     }
 }

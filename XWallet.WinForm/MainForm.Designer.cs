@@ -48,12 +48,12 @@ namespace XWallet.WinForm
             this.lblTotal = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvEmplados = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colVerificado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.MainPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmplados)).BeginInit();
@@ -222,6 +222,7 @@ namespace XWallet.WinForm
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBuscar
             // 
@@ -253,6 +254,10 @@ namespace XWallet.WinForm
             // 
             // dgvEmplados
             // 
+            this.dgvEmplados.AllowUserToAddRows = false;
+            this.dgvEmplados.AllowUserToDeleteRows = false;
+            this.dgvEmplados.AllowUserToOrderColumns = true;
+            this.dgvEmplados.AllowUserToResizeRows = false;
             this.dgvEmplados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvEmplados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmplados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -262,10 +267,44 @@ namespace XWallet.WinForm
             this.colVerificado});
             this.dgvEmplados.Location = new System.Drawing.Point(3, 83);
             this.dgvEmplados.Name = "dgvEmplados";
+            this.dgvEmplados.ReadOnly = true;
             this.dgvEmplados.RowHeadersVisible = false;
             this.dgvEmplados.RowTemplate.Height = 25;
+            this.dgvEmplados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmplados.Size = new System.Drawing.Size(433, 285);
             this.dgvEmplados.TabIndex = 0;
+            // 
+            // colId
+            // 
+            this.colId.DataPropertyName = "Id";
+            this.colId.HeaderText = "ID";
+            this.colId.Name = "colId";
+            this.colId.ReadOnly = true;
+            this.colId.Visible = false;
+            // 
+            // colCodigo
+            // 
+            this.colCodigo.DataPropertyName = "CodigoEmpleado";
+            this.colCodigo.HeaderText = "Codigo Empleado";
+            this.colCodigo.Name = "colCodigo";
+            this.colCodigo.ReadOnly = true;
+            this.colCodigo.Width = 116;
+            // 
+            // colNombre
+            // 
+            this.colNombre.DataPropertyName = "Nombre";
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
+            this.colNombre.Width = 76;
+            // 
+            // colVerificado
+            // 
+            this.colVerificado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colVerificado.DataPropertyName = "Verificado";
+            this.colVerificado.HeaderText = "Verificado";
+            this.colVerificado.Name = "colVerificado";
+            this.colVerificado.ReadOnly = true;
             // 
             // menuStrip1
             // 
@@ -282,34 +321,6 @@ namespace XWallet.WinForm
             this.statusStrip1.Size = new System.Drawing.Size(800, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
-            // 
-            // colId
-            // 
-            this.colId.DataPropertyName = "Id";
-            this.colId.HeaderText = "ID";
-            this.colId.Name = "colId";
-            this.colId.Visible = false;
-            // 
-            // colCodigo
-            // 
-            this.colCodigo.DataPropertyName = "CodigoEmpleado";
-            this.colCodigo.HeaderText = "Codigo Empleado";
-            this.colCodigo.Name = "colCodigo";
-            this.colCodigo.Width = 116;
-            // 
-            // colNombre
-            // 
-            this.colNombre.DataPropertyName = "Nombre";
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.Name = "colNombre";
-            this.colNombre.Width = 76;
-            // 
-            // colVerificado
-            // 
-            this.colVerificado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colVerificado.DataPropertyName = "Verificado";
-            this.colVerificado.HeaderText = "Verificado";
-            this.colVerificado.Name = "colVerificado";
             // 
             // MainForm
             // 
