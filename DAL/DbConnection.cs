@@ -1,18 +1,20 @@
-﻿using System;
+﻿using Microsoft.Extensions.Configuration;
+using System;
+using System.Data;
 using System.Data.SqlClient;
+using System.Text;
 
 namespace DAL
 {
     public class DbConnection
     {
-        private SqlCommand command;
-        private SqlDataAdapter adapter;
         private SqlConnection connect;
-        SqlConnectionStringBuilder cnn;
 
-        public DbConnection()
+        public DbConnection(IConfiguration configuration = null)
         {
-            connect = new SqlConnection("server=172.20.1.2;Database=consultaBalance;User Id=xmedical;Password=mdav4000");
+            //connect = new SqlConnection(configuration.GetConnectionString("SqlConnectionStr"));
+            connect = new SqlConnection("Server=172.20.1.2; Database=ConsultaBalance; User Id=xmedical; Password=mdav4000");
+
         }
 
         public bool Open()
@@ -27,5 +29,35 @@ namespace DAL
                 return false;
             }
         }
+
+        public void Saved() { }
+        public void Updated() { }
+
+        public DataTable QuerySql(string sql)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlCommand cmd = connect.CreateCommand())
+                {
+                    connect.Open();
+                    cmd.Connection = connect;
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = sql;
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return dt;
+        }
+
+        public void GetDetail(string codigo) { }
+        public void Delete(string codigo) { }
     }
 }

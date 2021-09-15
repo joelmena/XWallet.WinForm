@@ -50,6 +50,10 @@ namespace XWallet.WinForm
             this.dgvEmplados = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colVerificado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MainPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmplados)).BeginInit();
@@ -249,9 +253,16 @@ namespace XWallet.WinForm
             // 
             // dgvEmplados
             // 
+            this.dgvEmplados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvEmplados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmplados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colId,
+            this.colCodigo,
+            this.colNombre,
+            this.colVerificado});
             this.dgvEmplados.Location = new System.Drawing.Point(3, 83);
             this.dgvEmplados.Name = "dgvEmplados";
+            this.dgvEmplados.RowHeadersVisible = false;
             this.dgvEmplados.RowTemplate.Height = 25;
             this.dgvEmplados.Size = new System.Drawing.Size(433, 285);
             this.dgvEmplados.TabIndex = 0;
@@ -271,6 +282,34 @@ namespace XWallet.WinForm
             this.statusStrip1.Size = new System.Drawing.Size(800, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // colId
+            // 
+            this.colId.DataPropertyName = "Id";
+            this.colId.HeaderText = "ID";
+            this.colId.Name = "colId";
+            this.colId.Visible = false;
+            // 
+            // colCodigo
+            // 
+            this.colCodigo.DataPropertyName = "CodigoEmpleado";
+            this.colCodigo.HeaderText = "Codigo Empleado";
+            this.colCodigo.Name = "colCodigo";
+            this.colCodigo.Width = 116;
+            // 
+            // colNombre
+            // 
+            this.colNombre.DataPropertyName = "Nombre";
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.Width = 76;
+            // 
+            // colVerificado
+            // 
+            this.colVerificado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colVerificado.DataPropertyName = "Verificado";
+            this.colVerificado.HeaderText = "Verificado";
+            this.colVerificado.Name = "colVerificado";
             // 
             // MainForm
             // 
@@ -317,6 +356,10 @@ namespace XWallet.WinForm
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colVerificado;
     }
 }
 

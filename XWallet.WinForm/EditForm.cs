@@ -26,14 +26,7 @@ namespace XWallet.WinForm
         {
             var cnn = new BAL.Empleado();
 
-            if (cnn.Open())
-            {
-                MessageBox.Show("Ok");
-            }
-            else
-            {
-                MessageBox.Show("Fail");
-            }
+            cnn.GetList("");
         }
     }
 }

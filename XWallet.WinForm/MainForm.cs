@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace XWallet.WinForm
 {
     public partial class MainForm : Form
     {
+        private Empleado Empleado;
         public MainForm()
         {
             InitializeComponent();
+            Empleado = new Empleado();
+
+            dgvEmplados.DataSource = Empleado.GetList();
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
