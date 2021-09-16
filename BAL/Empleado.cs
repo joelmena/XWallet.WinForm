@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Text;
 
 namespace BAL
 {
@@ -19,14 +20,13 @@ namespace BAL
         
         public DataTable GetList(string busqueda = null)
         {
-            string sql = @"SELECT 
-                            Id, 
-                            CodigoEmpleado, 
-                            Nombre, 
-                            Verificado 
-                        FROM Empleados";
-
-            return QuerySql(sql);
+            StringBuilder sql = new StringBuilder();
+            sql.AppendLine("SELECT Id, CodigoEmpleado, Nombre, Verificado FROM Empleados");
+            if (!string.IsNullOrEmpty(busqueda))
+            {
+                sql.AppendLine($"WHERE CodigoEmpleado LIKE '%{busqueda}%' OR Nombre LIKE '%{busqueda}%'");
+            }
+            return QuerySql(sql.ToString());
         }
 
         public void GetDetail(string codigo) { }

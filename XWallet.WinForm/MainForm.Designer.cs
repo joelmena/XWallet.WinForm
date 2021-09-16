@@ -273,6 +273,7 @@ namespace XWallet.WinForm
             this.dgvEmplados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmplados.Size = new System.Drawing.Size(433, 285);
             this.dgvEmplados.TabIndex = 0;
+            this.dgvEmplados.Click += new System.EventHandler(this.dgvEmplados_Click);
             // 
             // colId
             // 
