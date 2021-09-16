@@ -17,22 +17,6 @@ namespace DAL
 
         }
 
-        public bool Open()
-        {
-            try
-            {
-                connect.Open();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
-        }
-
-        public void Saved() { }
-        public void Updated() { }
-
         public DataTable QuerySql(string sql)
         {
             DataTable dt = new DataTable();
@@ -61,7 +45,32 @@ namespace DAL
             return dt;
         }
 
-        public void GetDetail(string codigo) { }
-        public void Delete(string codigo) { }
+        public bool NonQuery(string sql)
+        {
+            bool result = false;
+            try
+            {
+                using (SqlCommand cmd = connect.CreateCommand())
+                {
+                    connect.Open();
+                    cmd.CommandText = sql;
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = connect;
+
+                    result = cmd.ExecuteNonQuery() > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                connect.Close();
+            }
+            return result;
+        }
+
+        
     }
 }

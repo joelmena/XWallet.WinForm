@@ -101,7 +101,7 @@ namespace XWallet.WinForm
             this.txtNombre.Location = new System.Drawing.Point(165, 109);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(160, 29);
-            this.txtNombre.TabIndex = 24;
+            this.txtNombre.TabIndex = 2;
             // 
             // label6
             // 
@@ -120,7 +120,7 @@ namespace XWallet.WinForm
             this.mkPassword.Name = "mkPassword";
             this.mkPassword.PasswordChar = '•';
             this.mkPassword.Size = new System.Drawing.Size(160, 29);
-            this.mkPassword.TabIndex = 22;
+            this.mkPassword.TabIndex = 3;
             // 
             // chkVerificado
             // 
@@ -129,7 +129,7 @@ namespace XWallet.WinForm
             this.chkVerificado.Location = new System.Drawing.Point(165, 179);
             this.chkVerificado.Name = "chkVerificado";
             this.chkVerificado.Size = new System.Drawing.Size(107, 25);
-            this.chkVerificado.TabIndex = 21;
+            this.chkVerificado.TabIndex = 4;
             this.chkVerificado.Text = "Verificado";
             this.chkVerificado.UseVisualStyleBackColor = true;
             // 
@@ -150,9 +150,10 @@ namespace XWallet.WinForm
             this.btnGuardar.Location = new System.Drawing.Point(250, 251);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 29);
-            this.btnGuardar.TabIndex = 20;
+            this.btnGuardar.TabIndex = 5;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // lblID
             // 
@@ -171,7 +172,7 @@ namespace XWallet.WinForm
             this.txtCodigoEmpleado.Location = new System.Drawing.Point(165, 74);
             this.txtCodigoEmpleado.Name = "txtCodigoEmpleado";
             this.txtCodigoEmpleado.Size = new System.Drawing.Size(160, 29);
-            this.txtCodigoEmpleado.TabIndex = 17;
+            this.txtCodigoEmpleado.TabIndex = 1;
             // 
             // label3
             // 
@@ -230,7 +231,7 @@ namespace XWallet.WinForm
             this.txtBuscar.Location = new System.Drawing.Point(3, 48);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(293, 29);
-            this.txtBuscar.TabIndex = 3;
+            this.txtBuscar.TabIndex = 0;
             // 
             // lblTotal
             // 
@@ -240,7 +241,7 @@ namespace XWallet.WinForm
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(59, 23);
             this.lblTotal.TabIndex = 2;
-            this.lblTotal.Text = "5000";
+            this.lblTotal.Text = "0";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -325,6 +326,7 @@ namespace XWallet.WinForm
             // 
             // MainForm
             // 
+            this.AcceptButton = this.btnBuscar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);

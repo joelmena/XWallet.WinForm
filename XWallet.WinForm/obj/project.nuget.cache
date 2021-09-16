@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "pTETjr8VkWvv/+fEGh/5MeLhkWDfMSMBq8FnDzAR/Z48Ji/ytuK/vznjJfC9aWkLEnqcj5Ysy6+FW49KegO2og==",
+  "dgSpecHash": "/yYOCfMDsj5jjVcsNUYLHNu1fhLf6LiifYOz/X0rConPwlxOMDgNrvAWehVaQFYnKNkN7TAUqxB9CT6AQR0S4A==",
   "success": true,
   "projectFilePath": "C:\\Users\\joelmena\\source\\repos\\XWallet.WinForm\\XWallet.WinForm\\XWallet.WinForm.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\joelmena\\.nuget\\packages\\cryptohelper\\3.0.2\\cryptohelper.3.0.2.nupkg.sha512",
+    "C:\\Users\\joelmena\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\2.0.1\\microsoft.aspnetcore.cryptography.internal.2.0.1.nupkg.sha512",
+    "C:\\Users\\joelmena\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\2.0.1\\microsoft.aspnetcore.cryptography.keyderivation.2.0.1.nupkg.sha512",
     "C:\\Users\\joelmena\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",
     "C:\\Users\\joelmena\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\joelmena\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",

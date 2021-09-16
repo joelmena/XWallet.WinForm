@@ -11,11 +11,18 @@ namespace BAL
         public int Id { get; set; }
         public string CodigoEmpleado { get; set; }
         public string Nombre { get; set; }
-        public byte[] Password { get; set; }
+        public string Password { get; set; }
         public bool Verificado { get; set; }
         
         
-        public void Saved() { }
+        public bool Saved(Empleado empleado)
+        {
+            StringBuilder sql = new StringBuilder();
+            sql.AppendLine("INSERT INTO Empleados (CodigoEmpleado, Nombre, Password, Verificado)");
+            sql.AppendLine($"VALUES ('{CodigoEmpleado}', '{Nombre}', PWDENCRYPT('{Password}'), {(Verificado == true ? 1 : 0)})");
+
+            return NonQuery(sql.ToString());
+        }
         public void Updated() { }
         
         public DataTable GetList(string busqueda = null)
@@ -24,19 +31,14 @@ namespace BAL
             sql.AppendLine("SELECT Id, CodigoEmpleado, Nombre, Verificado FROM Empleados");
             if (!string.IsNullOrEmpty(busqueda))
             {
-                sql.AppendLine($"WHERE CodigoEmpleado LIKE '%{busqueda}%' OR Nombre LIKE '%{busqueda}%'");
+                sql.AppendLine($" WHERE CodigoEmpleado LIKE '%{busqueda}%' OR Nombre LIKE '%{busqueda}%'");
             }
             return QuerySql(sql.ToString());
         }
 
-        public void GetDetail(string codigo) { }
-        public void Delete(string codigo) { }
-
-
-        public bool Open()
+        public void Delete(string codigo)
         {
-            var cnn = new DbConnection();
-            return cnn.Open();
+
         }
     }
 

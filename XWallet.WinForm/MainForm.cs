@@ -53,14 +53,26 @@ namespace XWallet.WinForm
             chkVerificado.Checked = (bool)dgvEmplados.SelectedRows[0].Cells["colVerificado"].Value;
         }
 
-        private void Limpiar()
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
-            txtCodigoEmpleado.Enabled = true;
-            lblID.Text = "NUEVO";
-            txtCodigoEmpleado.Text = string.Empty;
-            txtNombre.Text = string.Empty;
-            chkVerificado.Checked = false;
+            Empleado.Id = (lblID.Text != "NUEVO") ? int.Parse(lblID.Text) : 0;
+            Empleado.CodigoEmpleado = txtCodigoEmpleado.Text;
+            Empleado.Nombre = txtNombre.Text;
+            Empleado.Password = mkPassword.Text;
+            Empleado.Verificado = chkVerificado.Checked;
+
+            if (Empleado.Saved(Empleado))
+            {
+                ActualizarGridView(txtBuscar.Text);
+                Limpiar();
+                MessageBox.Show("Registro guardado");
+            }
+            else
+            {
+                MessageBox.Show("Error al guardar el registro");
+            }
         }
+
 
         private void ActualizarGridView(string busqueda = null)
         {
@@ -68,5 +80,15 @@ namespace XWallet.WinForm
             dgvEmplados.DataSource = result;
             lblTotal.Text = result.Rows.Count.ToString();
         }
+        private void Limpiar()
+        {
+            txtCodigoEmpleado.Enabled = true;
+            lblID.Text = "NUEVO";
+            txtCodigoEmpleado.Text = string.Empty;
+            txtNombre.Text = string.Empty;
+            mkPassword.Text = string.Empty;
+            chkVerificado.Checked = false;
+        }
+
     }
 }
