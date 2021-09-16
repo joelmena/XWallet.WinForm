@@ -61,15 +61,31 @@ namespace XWallet.WinForm
             Empleado.Password = mkPassword.Text;
             Empleado.Verificado = chkVerificado.Checked;
 
-            if (Empleado.Saved(Empleado))
+            if (Empleado.Id == 0)
             {
-                ActualizarGridView(txtBuscar.Text);
-                Limpiar();
-                MessageBox.Show("Registro guardado");
+                if (Empleado.Saved())
+                {
+                    ActualizarGridView(txtBuscar.Text);
+                    Limpiar();
+                    MessageBox.Show("Registro guardado");
+                }
+                else
+                {
+                    MessageBox.Show("Error al guardar el registro");
+                }
             }
             else
             {
-                MessageBox.Show("Error al guardar el registro");
+                if (Empleado.Updated())
+                {
+                    ActualizarGridView(txtBuscar.Text);
+                    Limpiar();
+                    MessageBox.Show("Registro actualizado");
+                }
+                else
+                {
+                    MessageBox.Show("Error al actualizar el registro");
+                }
             }
         }
 

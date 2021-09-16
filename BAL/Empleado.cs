@@ -15,7 +15,7 @@ namespace BAL
         public bool Verificado { get; set; }
         
         
-        public bool Saved(Empleado empleado)
+        public bool Saved()
         {
             StringBuilder sql = new StringBuilder();
             sql.AppendLine("INSERT INTO Empleados (CodigoEmpleado, Nombre, Password, Verificado)");
@@ -23,7 +23,14 @@ namespace BAL
 
             return NonQuery(sql.ToString());
         }
-        public void Updated() { }
+        public bool Updated()
+        {
+            StringBuilder sql = new StringBuilder();
+            sql.AppendLine($"UPDATE Empleados SET CodigoEmpleado = '{CodigoEmpleado}', Nombre = '{Nombre}', Password = PWDENCRYPT('{Password}'), Verificado = {(Verificado == true ? 1 : 0)}");
+            sql.AppendLine($" WHERE Id = {Id}");
+
+            return NonQuery(sql.ToString());
+        }
         
         public DataTable GetList(string busqueda = null)
         {
