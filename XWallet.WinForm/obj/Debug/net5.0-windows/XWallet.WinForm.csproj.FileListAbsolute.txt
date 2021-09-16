@@ -16,7 +16,6 @@ C:\Users\joelmena\source\repos\XWallet.WinForm\XWallet.WinForm\obj\Debug\net5.0-
 C:\Users\joelmena\source\repos\XWallet.WinForm\XWallet.WinForm\obj\Debug\net5.0-windows\ref\XWallet.WinForm.dll
 C:\Users\joelmena\source\repos\XWallet.WinForm\XWallet.WinForm\obj\Debug\net5.0-windows\XWallet.WinForm.pdb
 C:\Users\joelmena\source\repos\XWallet.WinForm\XWallet.WinForm\obj\Debug\net5.0-windows\XWallet.WinForm.genruntimeconfig.cache
-C:\Users\joelmena\source\repos\XWallet.WinForm\XWallet.WinForm\obj\Debug\net5.0-windows\XWallet.WinForm.EditForm.resources
 C:\Users\joelmena\source\repos\XWallet.WinForm\XWallet.WinForm\obj\Debug\net5.0-windows\XWallet.WinForm.Properties.Resources.resources
 C:\Users\joelmena\source\repos\XWallet.WinForm\XWallet.WinForm\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
 C:\Users\joelmena\source\repos\XWallet.WinForm\XWallet.WinForm\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll

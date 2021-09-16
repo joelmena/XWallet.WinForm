@@ -23,14 +23,6 @@ namespace XWallet.WinForm
             Limpiar();
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-            EditForm frm = new EditForm();
-
-            frm.ShowDialog();
-            frm.Dispose();
-        }
-
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             Limpiar();

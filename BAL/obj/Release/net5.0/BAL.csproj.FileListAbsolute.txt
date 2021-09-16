@@ -1,0 +1,15 @@
+C:\Users\joelmena\source\repos\XWallet.WinForm\BAL\bin\Release\net5.0\BAL.deps.json
+C:\Users\joelmena\source\repos\XWallet.WinForm\BAL\bin\Release\net5.0\BAL.dll
+C:\Users\joelmena\source\repos\XWallet.WinForm\BAL\bin\Release\net5.0\ref\BAL.dll
+C:\Users\joelmena\source\repos\XWallet.WinForm\BAL\bin\Release\net5.0\BAL.pdb
+C:\Users\joelmena\source\repos\XWallet.WinForm\BAL\bin\Release\net5.0\DAL.dll
+C:\Users\joelmena\source\repos\XWallet.WinForm\BAL\bin\Release\net5.0\DAL.pdb
+C:\Users\joelmena\source\repos\XWallet.WinForm\BAL\obj\Release\net5.0\BAL.csproj.AssemblyReference.cache
+C:\Users\joelmena\source\repos\XWallet.WinForm\BAL\obj\Release\net5.0\BAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joelmena\source\repos\XWallet.WinForm\BAL\obj\Release\net5.0\BAL.AssemblyInfoInputs.cache
+C:\Users\joelmena\source\repos\XWallet.WinForm\BAL\obj\Release\net5.0\BAL.AssemblyInfo.cs
+C:\Users\joelmena\source\repos\XWallet.WinForm\BAL\obj\Release\net5.0\BAL.csproj.CoreCompileInputs.cache
+C:\Users\joelmena\source\repos\XWallet.WinForm\BAL\obj\Release\net5.0\BAL.csproj.CopyComplete
+C:\Users\joelmena\source\repos\XWallet.WinForm\BAL\obj\Release\net5.0\BAL.dll
+C:\Users\joelmena\source\repos\XWallet.WinForm\BAL\obj\Release\net5.0\ref\BAL.dll
+C:\Users\joelmena\source\repos\XWallet.WinForm\BAL\obj\Release\net5.0\BAL.pdb

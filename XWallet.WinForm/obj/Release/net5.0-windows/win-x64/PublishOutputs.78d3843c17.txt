@@ -1,0 +1,5 @@
+C:\Users\joelmena\Desktop\myProjects\XWallet_mantenimiento\XWallet_Mantenimiento.pdb
+C:\Users\joelmena\Desktop\myProjects\XWallet_mantenimiento\sni.dll
+C:\Users\joelmena\Desktop\myProjects\XWallet_mantenimiento\BAL.pdb
+C:\Users\joelmena\Desktop\myProjects\XWallet_mantenimiento\DAL.pdb
+C:\Users\joelmena\Desktop\myProjects\XWallet_mantenimiento\XWallet_Mantenimiento.exe
