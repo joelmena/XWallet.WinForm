@@ -43,9 +43,12 @@ namespace BAL
             return QuerySql(sql.ToString());
         }
 
-        public void Delete(string codigo)
+        public bool Delete()
         {
+            StringBuilder sql = new StringBuilder();
+            sql.AppendLine($"DELETE FROM Empleados WHERE Id = {Id}");
 
+            return NonQuery(sql.ToString());
         }
     }
 

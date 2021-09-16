@@ -20,6 +20,7 @@ namespace XWallet.WinForm
             Empleado = new Empleado();
             dgvEmplados.AutoGenerateColumns = false;
             ActualizarGridView();
+            Limpiar();
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -51,6 +52,8 @@ namespace XWallet.WinForm
             txtCodigoEmpleado.Text = dgvEmplados.SelectedRows[0].Cells["colCodigo"].Value.ToString();
             txtNombre.Text = dgvEmplados.SelectedRows[0].Cells["colNombre"].Value.ToString();
             chkVerificado.Checked = (bool)dgvEmplados.SelectedRows[0].Cells["colVerificado"].Value;
+
+            btnEliminar.Enabled = true;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -104,7 +107,26 @@ namespace XWallet.WinForm
             txtNombre.Text = string.Empty;
             mkPassword.Text = string.Empty;
             chkVerificado.Checked = false;
+
+            btnEliminar.Enabled = false;
         }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Seguro que deseas eliminar chivo de mierda?", "Advertencia", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                Empleado.Id = int.Parse(lblID.Text);
+                if (Empleado.Delete())
+                {
+                    ActualizarGridView(txtBuscar.Text);
+                    Limpiar();
+                    MessageBox.Show("Registro eliminado");
+                }
+                else
+                {
+                    MessageBox.Show("Error al eliminar el registro");
+                }
+            }
+        }
     }
 }

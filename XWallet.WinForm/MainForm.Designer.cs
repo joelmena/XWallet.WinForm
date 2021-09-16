@@ -31,6 +31,7 @@ namespace XWallet.WinForm
         {
             this.MainPanel = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.mkPassword = new System.Windows.Forms.MaskedTextBox();
@@ -48,12 +49,12 @@ namespace XWallet.WinForm
             this.lblTotal = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvEmplados = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colVerificado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.MainPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmplados)).BeginInit();
@@ -76,6 +77,7 @@ namespace XWallet.WinForm
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.mkPassword);
@@ -94,6 +96,17 @@ namespace XWallet.WinForm
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar/Actualizar";
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnEliminar.Location = new System.Drawing.Point(13, 251);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 29);
+            this.btnEliminar.TabIndex = 7;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // txtNombre
             // 
@@ -210,9 +223,9 @@ namespace XWallet.WinForm
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(3, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(213, 25);
+            this.label2.Size = new System.Drawing.Size(221, 25);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Codigos de empleados";
+            this.label2.Text = "Mantenimiento XWallet";
             // 
             // btnBuscar
             // 
@@ -240,7 +253,7 @@ namespace XWallet.WinForm
             this.lblTotal.Location = new System.Drawing.Point(377, 371);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(59, 23);
-            this.lblTotal.TabIndex = 2;
+            this.lblTotal.TabIndex = 101;
             this.lblTotal.Text = "0";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -273,8 +286,24 @@ namespace XWallet.WinForm
             this.dgvEmplados.RowTemplate.Height = 25;
             this.dgvEmplados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmplados.Size = new System.Drawing.Size(433, 285);
-            this.dgvEmplados.TabIndex = 0;
+            this.dgvEmplados.TabIndex = 100;
             this.dgvEmplados.Click += new System.EventHandler(this.dgvEmplados_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
+            this.statusStrip1.TabIndex = 3;
+            this.statusStrip1.Text = "statusStrip1";
             // 
             // colId
             // 
@@ -283,9 +312,11 @@ namespace XWallet.WinForm
             this.colId.Name = "colId";
             this.colId.ReadOnly = true;
             this.colId.Visible = false;
+            this.colId.Width = 24;
             // 
             // colCodigo
             // 
+            this.colCodigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.colCodigo.DataPropertyName = "CodigoEmpleado";
             this.colCodigo.HeaderText = "Codigo Empleado";
             this.colCodigo.Name = "colCodigo";
@@ -307,22 +338,6 @@ namespace XWallet.WinForm
             this.colVerificado.HeaderText = "Verificado";
             this.colVerificado.Name = "colVerificado";
             this.colVerificado.ReadOnly = true;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
-            this.statusStrip1.TabIndex = 3;
-            this.statusStrip1.Text = "statusStrip1";
             // 
             // MainForm
             // 
@@ -370,6 +385,7 @@ namespace XWallet.WinForm
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colId;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
